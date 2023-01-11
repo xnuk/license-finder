@@ -1,7 +1,7 @@
 {
 	"tasks": {
 		"compress": "deno run --allow-read=./license-list-data/ --allow-write=./license.tar ./script.ts ./license.tar && gzip -9 ./license.tar",
-		"script-gen": "cat ./source.sh ./license.tar.gz > ./license.sh && chmod +x ./license.sh",
+		"script-gen": "cat ./source.sh ./license.tar.gz > ./license && chmod +x ./license",
 		"build": "deno task compress && deno task script-gen"
 	}
 }
