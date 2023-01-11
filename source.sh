@@ -16,7 +16,7 @@ if [ -n "${arg}" ]; then
 fi
 
 names=$(${payload} | ${list})
-name=$(fzf --preview="${payload} | ${unpack}" <<EOF
+name=$(fzf --preview="${payload} | ${unpack} {}" <<EOF
 ${names}
 EOF
 )
